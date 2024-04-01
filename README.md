@@ -29,3 +29,9 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
 answer, including your reasoning, to this markdown file.
+
+Setting up the initial matrix of distances takes O(V^2) time because you initialize a VxV matrix and set each entry to Infinity. Then the triple nested loops iterate through each vertex pair and try to relax the distance if a shorter path is found through an intermediate vertex. Each iteration of that takes constant time for a total of O(V^3) iterations. Lastly we account for the time to get the weights of each edge into the matrix is an operation of 
+ |E| timecomplexity.
+
+So, the overall worst-case runtime complexity is O(|V^2|+|V^3|+|E|).
+
